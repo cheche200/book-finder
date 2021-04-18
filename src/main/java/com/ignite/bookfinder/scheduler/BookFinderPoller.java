@@ -2,10 +2,9 @@ package com.ignite.bookfinder.scheduler;
 
 import com.ignite.bookfinder.domain.oreilly.Result;
 import com.ignite.bookfinder.domain.oreilly.ResultWrapper;
+import com.ignite.bookfinder.repository.BookRepository;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisOperations;
-import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -18,11 +17,11 @@ public class BookFinderPoller {
 
     private final RedisConnectionFactory connectionFactory;
 
-    private final RedisOperations<String, Result> redisOperations;
+    private final BookRepository bookRepository;
 
-    public BookFinderPoller(RedisConnectionFactory connectionFactory, RedisOperations<String, Result> redisOperations) {
+    public BookFinderPoller(RedisConnectionFactory connectionFactory, BookRepository bookRepository) {
         this.connectionFactory = connectionFactory;
-        this.redisOperations = redisOperations;
+        this.bookRepository = bookRepository;
     }
 
     @PostConstruct
@@ -32,9 +31,8 @@ public class BookFinderPoller {
                 .retrieve()
                 .bodyToFlux(ResultWrapper.class)
                 .toStream()
-                .forEach(b -> b.getResults().stream().forEach(result -> redisOperations.opsForValue().set(result.getId(), result)));
+                .forEach(b -> b.getResults().stream().forEach(bookRepository::save));
 
-        redisOperations.opsForValue()
-                .getOperations().keys("*").forEach(b -> System.out.println(redisOperations.opsForValue().get(b)));
+        bookRepository.findAll().forEach(System.out::println);
     }
 }
