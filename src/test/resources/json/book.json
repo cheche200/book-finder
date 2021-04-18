@@ -1,0 +1,139 @@
+[
+  {
+    "previous": "",
+    "next": "",
+    "page": 0,
+    "results": [
+      {
+        "id": "https://www.safaribooksonline.com/api/v1/book/9781492071266/",
+        "content_type": "book",
+        "archive_id": "9781492071266",
+        "ourn": "urn:orm:book:9781492071266",
+        "title": "Python Crash Course, 2nd Edition",
+        "timestamp": "2019-09-23T13:10:03.941Z",
+        "last_modified_time": "2019-05-03T16:45:30.657Z",
+        "date_added": "2019-05-03T16:45:30.657Z",
+        "issued": "2019-05-07T00:00:00Z",
+        "isbn": "9781593279288",
+        "format": "book",
+        "content_format": "book",
+        "virtual_pages": 693,
+        "duration_seconds": 0,
+        "language": "en",
+        "natural_key": [
+          "9781492071266"
+        ],
+        "source": "application/epub+zip",
+        "video_classification": "conference",
+        "has_assessment": false,
+        "academic_excluded": false,
+        "url": "https://learning.oreilly.com/api/v1/book/9781492071266/",
+        "web_url": "https://learning.oreilly.com/library/view/python-crash-course/9781492071266/",
+        "cover_url": "https://learning.oreilly.com/library/cover/9781492071266/",
+        "description": "",
+        "popularity": 999942244,
+        "average_rating": 4600,
+        "report_score": 23000,
+        "number_of_reviews": 5,
+        "number_of_followers": 0,
+        "number_of_items": 0,
+        "authors": [
+          "Eric Matthes"
+        ],
+        "publishers": [
+          "No Starch Press"
+        ],
+        "topics": [
+          "cda50ea0-3a3a-4d54-89bb-a7a4179365e6"
+        ],
+        "topics_payload": [
+          {
+            "uuid": "cda50ea0-3a3a-4d54-89bb-a7a4179365e6",
+            "slug": "python",
+            "name": "Python",
+            "score": 0.932
+          }
+        ]
+      }
+    ],
+    "total": 1,
+    "facets": {
+      "facet_queries": {},
+      "facet_fields": {
+        "format": [
+          "book",
+          "40781",
+          "case study",
+          "152",
+          "..."
+        ],
+        "subjects": [
+          ".NET",
+          "1050",
+          "Agile",
+          "70",
+          "..."
+        ],
+        "topic_uuids": [
+          "3af8f002-897e-4e9c-ab4f-f62539ffa2f8",
+          "974",
+          "72905113-4451-48d8-ab02-64c399f95321",
+          "847",
+          "397dac1-feca-4adc-b98b-668e4b9d33de",
+          "812",
+          "..."
+        ],
+        "topics": [
+          "Team Management & Leadership",
+          "974",
+          "Leadership",
+          "847",
+          "Java",
+          "812",
+          "..."
+        ],
+        "publishers_exact": [
+          "North Light Books",
+          "31",
+          "O'Reilly Media, Inc.",
+          "4418",
+          "..."
+        ],
+        "language": [
+          "en",
+          "48832",
+          "..."
+        ],
+        "sharing_status": [
+          "enterprise",
+          "7898",
+          "public",
+          "1001"
+        ],
+        "expert_playlist": [
+          "false",
+          "8867",
+          "true",
+          "32"
+        ],
+        "video_classification": [
+          "conference",
+          "112"
+        ]
+      },
+      "facet_ranges": {},
+      "facet_intervals": {
+        "no_stars": 30511,
+        "zero_stars": 0,
+        "one_star": 889,
+        "two_stars": 1013,
+        "three_stars": 2343,
+        "four_stars": 5171,
+        "five_stars": 8905
+      }
+    },
+    "meta": {
+      "query_identifier": "89810683-d619-41da-b726-93f8ecfab2f4"
+    }
+  }
+]
